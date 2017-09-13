@@ -22,9 +22,36 @@
     <!-- Content of the Website -->
     <h1>Tell us what you think</h1>
 
-    <form>
-
+    <form action="#" method="post">
+        <label>How do you like our pizza?
+            <input type="radio" name="rating_pizza" value="awesome"> Awesome
+            <input type="radio" name="rating_pizza" value="good"> Good
+            <input type="radio" name="rating_pizza" value="okay"> Okay
+            <input type="radio" name="rating_pizza" value="poor"> Poor
+        </label>
+        <br>
+        <label>What do you think about our prizes?
+            <input type="radio" name="rating_pizza" value="fair"> Fair
+            <input type="radio" name="rating_pizza" value="okay"> Okay
+            <input type="radio" name="rating_pizza" value="expensive"> Expensive
+        </label>
+        <br>
+        <label>
+            Your name? <input type="text" name="name">
+        </label>
+        <br>
+        <label>
+            Your e-mail address? <input type="email" name="email">
+        </label>
+        <br>
+        <label>
+            What can we do better?
+            <textarea name="comment" rows="10" cols="60"></textarea>
+        </label>
+        <br>
+        <input type="submit" value="Send">
     </form>
+
     <!-- Footer-Information -->
     <footer>
         <div class="left">

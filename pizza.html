@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="keywords" content="pizza, salad, softdrinks, restaurant">
     <meta name="description" content="order pizza">
@@ -9,7 +10,7 @@
     <header>
         <!-- Navigation-Bar-Information -->
         <nav>
-            <h2><a href="homepage.html">Tony's Pizza Factory</a></h2>
+            <a id="mainlink" href="index.html">Tony's Pizza Factory</a>
             <ul>
                 <li><a href="pizza.html">Pizza</a></li>
                 <li><a href="salad.html">Salad</a></li>
@@ -18,39 +19,83 @@
             </ul>
         </nav>
     </header>
+
     <!-- Content of the Website -->
     <h1>Pizza</h1>
-    <div class="infobox">
-        <img src="#" alt="piccante" />
-        Picante 16$<br>
-        <small>Tomato, mozzarella, spicy salami, chillies, oregano</small>
+    <div id="piccante" class="infobox">
+        <img src="#" alt="Piccante" />
+        <h2>Piccante</h2>
+		    <p class="ingredients">Tomato, mozzarela, spicy salami, chillies, oregano</p>
+		    <p class="price">16$</p>
     </div>
 
-    <div class="infobox">
-        <img src="#" alt="giardino" />
-        Giardino 14$<br>
-        <small>Tomato, mozzarella, artichokes, fresh mushrooms</small>
+    <div id="giardino" class="infobox">
+        <img src="#" alt="Giardino" />
+        <h2>Giardino</h2>
+		    <p class="ingredients">Tomato, mozzarela, artichokes, fresh mushrooms</p>
+		    <p class="price">14$</p>
     </div>
+
+    <div id="proscefun" class="infobox">
+      <img src="#" alt="Prosciutto e funghi" />
+      <h2>Prosciutto e funghi</h2>
+  		<p class="ingredients">Tomato, mozzarela, ham, fresh mushrooms, oregano</p>
+  		<p class="price">15$</p>
+    </div>
+
+    <div id="quattroform" class="infobox">
+      <img src="#" alt="Quattro formaggi" />
+      <h2>Quattro formaggi</h2>
+  		<p class="ingredients">Tomato, mozzarela, parmesan, gorgonzola (blue...)</p>
+  		<p class="price">13$</p>
+	  </div>
+
+  	<div id="quattrosta" class="infobox">
+      <img src="#" alt="Quattro stagioni" />
+      <h2>Quattro stagioni</h2>
+  		<p class="ingredients">Tomato, mozzarela, ham, artishokes, fresh mushrooms</p>
+  		<p class="price">17$</p>
+  	</div>
+
+  	<div id="stromboli" class="infobox">
+      <img src="#" alt="Stromboli" />
+    	<h2>Stromboli</h2>
+  		<p class="ingredients">Tomato, mozzarela, fresh chillies, olives, oregano</p>
+  		<p class="price">12$</p>
+    </div>
+
+  	<div id="verde" class="infobox">
+      <img src="#" alt="Verde" />
+    	<h2>Verde</h2>
+  		<p class="ingredients">Tomato, mozzarela, broccoli, spinach, oregano</p>
+  		<p class="price">13$</p>
+  	</div>
+
+  	<div id="rustica" class="infobox">
+      <img src="#" alt="Rustica" />
+    	<h2>Rustica</h2>
+  		<p class="ingredients">Tomato, mozzarela, ham, bacon, onions, garlic, oregano</p>
+  		<p class="price">15$</p>
+  	</div>
 
 
     <!-- Footer-Information -->
     <footer>
-        <div class="left">
+        <div class="openinghours">
             Hours: <br>
             Mon-Thu: 11 a.m. - 23 p.m.<br>
             Fri-Sat: 11 a.m. - 24 p.m.<br>
             Sunday closed
         </div>
-        <div class="middle">
+        <div class="rating">
             <q>The Pizzeria is one place I have been wanting to
-                visit for a long time. The reason being their Rustica pizza which absolutely blew me away.
-            </q>
+                visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
             - Jimmy
         </div>
-        <div class="right">
+        <div class="address">
             Address: <br>
             Tony's Pizza Factory<br>
-            212 2 N Clark St<br>
+            2122 N Clark St<br>
             Chicago, IL 60614, USA
         </div>
     </footer>

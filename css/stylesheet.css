@@ -1,0 +1,64 @@
+body {
+	width: 100%;
+	font-family: sans-serif;
+	font-size: 100%;
+}
+
+header, footer {
+	margin: 0;
+	background-color: #7399d6;
+}
+
+nav ul {
+	list-style: none;
+	text-align: center;
+}
+
+nav li {
+	/*float: left;*/
+ display: inline-block;
+
+}
+
+header li a {
+	/*float: left;*/
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+#mainlink {
+	float: left;
+}
+
+/*
+ * img[alt="inside the restaurant"] {
+	text-align: center;
+}
+*/
+footer {
+	display: inline-block;
+	/*min-height: 100px;*/
+	padding: 1.5rem;
+}
+
+.openinghours{
+	text-align: left;
+	float: left;
+	width: 35%;
+}
+
+.rating {
+	float: left;
+	text-align: center;
+	width: 35%;
+}
+
+.address {
+	text-align: left;
+	float: right;
+	max-width: 30%;
+}

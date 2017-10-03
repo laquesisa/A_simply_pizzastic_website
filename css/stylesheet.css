@@ -16,6 +16,7 @@ header, footer {
 .content {
 	/*Will be used to get the footer stick
 	at the bottom, not as now in feedback*/
+	padding: 0 1em;
 }
 
 h1 {

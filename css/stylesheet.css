@@ -10,8 +10,21 @@ header, footer {
 	background-color: #7399d6;
 	width: 100%;
 	line-height: 2em;
+	box-shadow: 0px 0px 9px 2px #000;
 }
 
+.content {
+	/*Will be used to get the footer stick
+	at the bottom, not as now in feedback*/
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+
+/*-------- Style for the navigation-bar ------------*/
 ul {
 	margin: 0;
 }
@@ -32,27 +45,21 @@ header li a:link {
 	text-align: right;
 }
 
-header li a:visited {
+header li a:visited, #mainlink:visited {
 	color: #000;
 }
 
-header li a:focus {
+header li a:focus, #mainlink:focus {
 	color: #fff;
 }
 
 
-header li a:hover {
+header li a:hover, #mainlink:hover {
 	color: #fff;
 }
 
-header li a:active {
-	color: #42f4df;
-}
-
-
-h1 {
-	font-size: 3rem;
-	text-align: center;
+header li a:active, #mainlink:active {
+	color: #c2cbed;
 }
 
 #mainlink:link {
@@ -61,32 +68,14 @@ h1 {
 	padding: 0 0 0 1em;
 	text-decoration: none;
 }
-#mainlink:visited {
-  color: #000;
-}
-#mainlink:focus {
-	color: #fff;
-}
-#mainlink:hover {
-	color: #fff;
-}
-#mainlink:active {
-	color: #42f4df;
-}
 
 
-
-.content {
-	padding: 0 1em;
-	min-height: 100%;
-}
-
+/*--------- Style for the footer -----------------*/
 footer {
 	display: inline-block;
-	/*min-height: 100px;*/
 	line-height: 1.5;
-
-	}
+	margin: 1em 0 -2em 0;
+}
 
 .openinghours{
 	padding: 2em 0;
@@ -114,4 +103,74 @@ footer {
 	position: absolute;
 	left: 77.50%;
 
+}
+
+
+
+/*----- Style for the pictures on the index-page --------*/
+.restaurantimg {
+	text-align: center;
+}
+
+.allthings {
+	text-align: center;
+}
+
+.allthings img {
+	margin: 0.5em;
+}
+
+/*#pizzaimg {
+	position: absolute;
+	left: 5%;
+}
+
+#saladimg {
+	position: absolute;
+	left: 35%;
+}
+
+#softdrinkimg {
+	position: absolute;
+	right: 5%;
+}
+*/
+
+
+/*--------- Style the form on the feedback-page ------------*/
+input[type="submit"] {
+	background-color: #374784;
+	border: none;
+	color: #fff;
+	padding: 1.5em 4em;
+	cursor: pointer;
+	margin-top: 5em;
+	position: absolute;
+	left: 40%;
+}
+
+input[type="text"], input[type="email"], textarea {
+	width: 50%;
+	position: absolute;
+	left: 40%;
+	color: #3d3d3d;
+}
+
+.radio_button {
+	position: absolute;
+	left: 40%;
+	margin-top: -2.2em;
+}
+
+.radio_button label {
+	margin-right: 1em;
+}
+
+form {
+	margin-bottom: 10em;
+}
+
+form p {
+	text-align: right;
+	padding-right: 65%;
 }

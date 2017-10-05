@@ -140,18 +140,25 @@ footer {
 
 /*--------- Style the form on the feedback-page ------------*/
 input[type="submit"] {
-	background-color: #374784;
+	background-color: #d6d6d6;
 	border: none;
-	color: #fff;
-	padding: 1.5em 4em;
+	font-weight: bold;
+	color: #374784;
+	padding: 0.75em 1em;
 	cursor: pointer;
 	margin-top: 5em;
 	position: absolute;
 	left: 40%;
+
+}
+
+input[type="submit"]:hover {
+	background-color: #374784;
+	color: #d6d6d6;
 }
 
 input[type="text"], input[type="email"], textarea {
-	width: 50%;
+	width: 30em;
 	position: absolute;
 	left: 40%;
 	color: #3d3d3d;
@@ -173,5 +180,5 @@ form {
 
 form p {
 	text-align: right;
-	padding-right: 65%;
+	padding-right: 62%;
 }

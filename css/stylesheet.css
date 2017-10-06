@@ -4,19 +4,25 @@ body {
 	font-size: 100%;
 	padding: 0;
 	margin: 0;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
 header, footer {
 	background-color: #7399d6;
 	width: 100%;
-	line-height: 2em;
 	box-shadow: 0px 0px 9px 2px #000;
 }
 
-.content {
-	/*Will be used to get the footer stick
-	at the bottom, not as now in feedback*/
+header {
+	line-height: 4em;
+}
+
+#content {
+	/*is be used to get the footer stick to the bottom*/
 	padding: 0 1em;
+	flex: 1;
 }
 
 h1 {
@@ -48,6 +54,14 @@ header li a:link {
 	margin: 0 0.5em;
 	text-align: right;
 	color: #000;
+	padding: 2em 0em;
+}
+
+#mainlink:link {
+	color: #000;
+	float: left;
+	margin: 0 0 0 1em;
+	text-decoration: none;
 }
 
 header li a:visited, #mainlink:visited {
@@ -64,14 +78,8 @@ header li a:hover, #mainlink:hover {
 }
 
 header li a:active, #mainlink:active {
-	color: #c2cbed;
-}
-
-#mainlink:link {
-	color: #000;
-	float: left;
-	padding: 0 0 0 1em;
-	text-decoration: none;
+	color: #fff;
+	text-decoration: underline;
 }
 
 
@@ -79,7 +87,7 @@ header li a:active, #mainlink:active {
 footer {
 	display: inline-block;
 	line-height: 1.5;
-	margin: 1em 0 -2em 0;
+	margin: 1em 0 0 0;
 }
 
 .openinghours{
@@ -124,22 +132,6 @@ footer {
 .allthings img {
 	margin: 0.5em;
 }
-
-/*#pizzaimg {
-	position: absolute;
-	left: 5%;
-}
-
-#saladimg {
-	position: absolute;
-	left: 35%;
-}
-
-#softdrinkimg {
-	position: absolute;
-	right: 5%;
-}
-*/
 
 
 /*--------- Style for the form on the feedback-page ------------*/

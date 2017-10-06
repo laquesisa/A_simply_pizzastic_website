@@ -1,6 +1,6 @@
 ## This webite is for a school project at the FFHS.
 
-### ----------- 03.10.2017 Version 1.0.1 ------------
+### ----------- 06.10.2017 Version 1.0.1 ------------
 Added the Style-Sheet.
 The photos are from the website: http://www.photosforclass.com/
 

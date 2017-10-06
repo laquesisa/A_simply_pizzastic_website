@@ -12,7 +12,6 @@ body {
 header, footer {
 	background-color: #7399d6;
 	width: 100%;
-	line-height: 2em;
 	box-shadow: 0px 0px 9px 2px #000;
 }
 
@@ -21,8 +20,7 @@ header {
 }
 
 #content {
-	/*Will be used to get the footer stick
-	at the bottom, not as now in feedback*/
+	/*is be used to get the footer stick to the bottom*/
 	padding: 0 1em;
 	flex: 1;
 }
@@ -53,6 +51,14 @@ header li a:link {
 	margin: 0 0.5em;
 	text-align: right;
 	color: #000;
+	padding: 2em 0em;
+}
+
+#mainlink:link {
+	color: #000;
+	float: left;
+	margin: 0 0 0 1em;
+	text-decoration: none;
 }
 
 header li a:visited, #mainlink:visited {
@@ -69,14 +75,8 @@ header li a:hover, #mainlink:hover {
 }
 
 header li a:active, #mainlink:active {
-	color: #c2cbed;
-}
-
-#mainlink:link {
-	color: #000;
-	float: left;
-	margin: 0 0 0 1em;
-	text-decoration: none;
+	color: #fff;
+	text-decoration: underline;
 }
 
 
@@ -129,22 +129,6 @@ footer {
 .allthings img {
 	margin: 0.5em;
 }
-
-/*#pizzaimg {
-	position: absolute;
-	left: 5%;
-}
-
-#saladimg {
-	position: absolute;
-	left: 35%;
-}
-
-#softdrinkimg {
-	position: absolute;
-	right: 5%;
-}
-*/
 
 
 /*--------- Style the form on the feedback-page ------------*/

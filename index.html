@@ -4,54 +4,79 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="pizza, salad, softdrinks, restaurant">
     <meta name="description" content="order pizza, salad and softdrinks at tonys pizza factory. We're a little restaurant in Chicago">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="icon" href="images/icon.png">
     <title>Tony's Pizza Factory</title>
 </head>
 <body>
     <header>
-        <!-- Navigation-Bar-Information -->
-        <nav>
-          <a id="mainlink" href="index.html">Tony's Pizza Factory</a>
-            <ul>
-		            <li><a href="pizza.html">Pizza</a></li>
-                <li><a href="salad.html">Salad</a></li>
-                <li><a href="softdrinks.html">Soft drinks</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
+      <!-- Navigation-Bar-Information-->
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <a id="mainlink" class="navbar-brand" href="index.html">Tony's Pizza Factory</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#togglethenavbar" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="togglethenavbar">
+            <ul class="navbar-nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link" href="pizza.html">Pizza</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="salad.html">Salad</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="softdrinks.html">Soft drinks</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
             </ul>
-        </nav>
+        </div>
+      </nav>
     </header>
 
     <!-- Content of the Website -->
     <div id="content">
       <h1>Welcome to Tony's Pizza Factory</h1>
-      <div class="restaurantimg">
-        <img src="./images/restaurant.png" width="300" alt="inside the restaurant" />
+        <img src="./images/restaurant.png" class="rounded img-fluid mx-auto d-block homeimg" alt="inside the restaurant" />
+        <br>
+      <div class="justify-content-center row">
+        <a href="pizza.html" class="col-12 col-sm-4 centering"><img class="rounded clickable homeimg" src="./images/pizza_home.png" alt="Pizza" /></a>
+        <a href="salad.html" class="col-12 col-sm-4 centering"><img class="rounded clickable homeimg" src="./images/salad_home.png" alt="Salad" /></a>
+        <a href="softdrinks.html" class="col-12 col-sm-4 centering"><img class="rounded clickable homeimg" src="./images/softdrink_home.png" alt="Softdrinks" /></a>
       </div>
-      <div class="allthings">
-        <a href="pizza.html"><img id="pizzaimg" src="./images/pizza.png" width="200" alt="Pizza" /></a>
-        <a href="salad.html"><img id="saladimg" src="./images/salad.png" width="200" alt="Salad" /></a>
-        <a href="softdrinks.html"><img id="softdrinkimg" src="./images/softdrink.png" width="200" alt="Softdrinks" /></a>
-      </div>
+
     </div>
+
     <!-- Footer-Information -->
-    <footer>
-        <div class="openinghours">
-            Hours: <br>
-            Mon-Thu: <time class="mon_til_thu_start" datetime="11:00">11 a.m.</time> - <time class="mon_til_thu_end" datetime="23:00">23 p.m.</time><br>
-            Fri-Sat: <time class="fri_til_sat_start" datetime="11:00">11 a.m.</time> - <time class="fri_til_sat_end" datetime="00:00">24 p.m.</time><br>
-	    Sunday closed
-        </div>
-        <div class="rating">
-            <q>The Pizzeria is one place I have been wanting to
-                visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
-            - Jimmy
-        </div>
-        <div class="address">
-            Address: <br>
-            Tony's Pizza Factory<br>
-            2122 N Clark St<br>
-            Chicago, IL 60614, USA
+    <footer class="bg-faded">
+        <div class="row">
+          <div class="openinghours col-md-3">
+              Hours: <br>
+              Mon-Thu: <time class="mon_til_thu_start" datetime="11:00">11 a.m.</time> - <time class="mon_til_thu_end" datetime="23:00">23 p.m.</time><br>
+              Fri-Sat: <time class="fri_til_sat_start" datetime="11:00">11 a.m.</time> - <time class="fri_til_sat_end" datetime="00:00">24 p.m.</time><br>
+  	          Sunday closed
+          </div>
+          <div class="rating col-md-6 d-none d-md-block">
+              <q>The Pizzeria is one place I have been wanting to
+                  visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
+              - Jimmy
+          </div>
+          <div class="address col-md-3 d-none d-md-block">
+              Address: <br>
+              Tony's Pizza Factory<br>
+              2122 N Clark St<br>
+              Chicago, IL 60614, USA
+          </div>
         </div>
     </footer>
+
+    <!-- Bootstrap v4-alpha-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 </body>
 </html>

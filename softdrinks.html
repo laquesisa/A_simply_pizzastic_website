@@ -4,86 +4,152 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="pizza, salad, softdrinks, restaurant">
     <meta name="description" content="order pizza, salad and softdrinks at tonys pizza factory. We're a little restaurant in Chicago">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--<link rel="stylesheet" href="css/stylesheet.css">-->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylesheet.css">
     <title>Softdrinks</title>
 </head>
 <body>
-    <header>
-        <!-- Navigation-Bar-Information -->
-        <nav>
-            <a id="mainlink" href="index.html">Tony's Pizza Factory</a>
-            <ul>
-                <li><a href="pizza.html">Pizza</a></li>
-                <li><a href="salad.html">Salad</a></li>
-                <li><a href="softdrinks.html">Soft drinks</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <!-- Navigation-Bar-Information-->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <a id="mainlink" class="navbar-brand" href="index.html">Tony's Pizza Factory</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#togglethenavbar" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="togglethenavbar">
+          <ul class="navbar-nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="pizza.html">Pizza</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="salad.html">Salad</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="softdrinks.html">Soft drinks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+          </ul>
+      </div>
+    </nav>
+  </header>
 
     <!-- Content of the Website -->
     <div id="content">
-      <h1>Soft drinks</h1>
-      <div id="coke" class="infobox">
-        <img src="#" alt="coke" />
-        <h2>Coke</h2>
-        <select class="cliters">
-          <option value="50">50cl</option>
-          <option value="33">33cl</option>
-        </select>
-        <span class="price">2$</span>
-      </div>
+      <h1 class="text-center">Soft drinks</h1>
+      <div class="row justify-content-center">
+        <div id="coke" class="col-10 col-md-3 p-md-4 mb-2">
+          <div class="row">
+              <img src="images/softdrink.png" class="col-12 m-0 mb-2" alt="coke" />
+          </div>
+          <div class="row">
+            <h2 class="col-12 pt-2">Coke</h2>
+            <select class="col-5 ml-3 custom-select">
+              <option value="50">50cl</option>
+              <option value="33">33cl</option>
+            </select>
+            <div class="col-3 text-right align-self-center">
+              <span class="price">2$</span>
+            </div>
+            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
+              <img src="images/cart.png" class="cart" alt="shopping cart" />
+            </div>
+          </div>
+        </div>
 
-      <div id="fanta" class="infobox">
-        <img src="#" alt="fanta" />
-        <h2>Fanta</h2>
-        <select class="cliters">
-          <option value="50">50cl</option>
-          <option value="33">33cl</option>
-        </select>
-    		<span class="price">2$</span>
-      </div>
+        <div id="fanta" class="col-10 col-md-3 p-md-4 mb-2">
+          <div class="row">
+              <img src="images/softdrink.png" class="col-12 m-0 mb-2" alt="fanta" />
+          </div>
+          <div class="row">
+            <h2 class="col-12 pt-2">Fanta</h2>
+            <select class="col-5 ml-3 custom-select">
+              <option value="50">50cl</option>
+              <option value="33">33cl</option>
+            </select>
+            <div class="col-3 text-right align-self-center">
+              <span class="price">2$</span>
+            </div>
+            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
+              <img src="images/cart.png" class="cart" alt="shopping cart" />
+            </div>
+          </div>
+        </div>
 
-      <div id="pepsi" class="infobox">
-        <img src="#" alt="pepsi" />
-        <h2>Pepsi</h2>
-        <select class="cliters">
-          <option value="50">50cl</option>
-          <option value="33">33cl</option>
-        </select>
-    		<span class="price">2$</span>
-      </div>
+        <div id="pepsi" class="col-10 col-md-3 p-md-4 mb-2">
+          <div class="row">
+              <img src="images/softdrink.png" class="col-12 m-0 mb-2" alt="pepsi" />
+          </div>
+          <div class="row">
+            <h2 class="col-12 pt-2">Pepsi</h2>
+            <select class="col-5 ml-3 custom-select">
+              <option value="50">50cl</option>
+              <option value="33">33cl</option>
+            </select>
+            <div class="col-3 text-right align-self-center">
+              <span class="price">2$</span>
+            </div>
+            <div class="col-3 col-md-2 col-ld-3 text-center">
+              <img src="images/cart.png" class="cart" alt="shopping cart" />
+            </div>
+          </div>
+        </div>
 
-      <div id="redbull" class="infobox">
-        <img src="#" alt="redbull" />
-        <h2>Red bull</h2>
-        <select class="cliters">
-          <option value="50">50cl</option>
-          <option value="33">33cl</option>
-        </select>
-    		<span class="price">3$</span>
+        <div id="redbull" class="col-10 col-md-3 p-md-4 mb-2">
+          <div class="row">
+              <img src="images/softdrink.png" class="col-12 m-0 mb-2" alt="redbull" />
+          </div>
+          <div class="row">
+            <h2 class="col-12 pt-2">Red bull</h2>
+            <select class="col-5 ml-3 custom-select">
+              <option value="50">50cl</option>
+              <option value="33">33cl</option>
+            </select>
+            <div class="col-3 text-right align-self-center">
+              <span class="price">3$</span>
+            </div>
+            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
+              <img src="images/cart.png" class="cart" alt="shopping cart" />
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- Footer-Information -->
-    <footer>
-        <div class="openinghours">
-            Hours: <br>
-            Mon-Thu: <time class="mon_til_thu_start" datetime="11:00">11 a.m.</time> - <time class="mon_til_thu_end" datetime="23:00">23 p.m.</time><br>
-            Fri-Sat: <time class="fri_til_sat_start" datetime="11:00">11 a.m.</time> - <time class="fri_til_sat_end" datetime="00:00">24 p.m.</time><br>
-            Sunday closed
-        </div>
-        <div class="rating">
-            <q>The Pizzeria is one place I have been wanting to
-                visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
-            - Jimmy
-        </div>
-        <div class="address">
-            Address: <br>
-            Tony's Pizza Factory<br>
-            2122 N Clark St<br>
-            Chicago, IL 60614, USA
+    <footer class="bg-faded">
+        <div class="row">
+          <div class="openinghours col-md-3">
+              Hours: <br>
+              Mon-Thu: <time class="mon_til_thu_start" datetime="11:00">11 a.m.</time> - <time class="mon_til_thu_end" datetime="23:00">23 p.m.</time><br>
+              Fri-Sat: <time class="fri_til_sat_start" datetime="11:00">11 a.m.</time> - <time class="fri_til_sat_end" datetime="00:00">24 p.m.</time><br>
+              Sunday closed
+          </div>
+          <div class="rating col-md-6 d-none d-md-block">
+              <q>The Pizzeria is one place I have been wanting to
+                  visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
+              - Jimmy
+          </div>
+          <div class="address col-md-3 d-none d-md-block">
+              Address: <br>
+              Tony's Pizza Factory<br>
+              2122 N Clark St<br>
+              Chicago, IL 60614, USA
+          </div>
         </div>
     </footer>
+
+    <!-- Bootstrap 2 -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 </body>
 </html>

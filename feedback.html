@@ -4,72 +4,136 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="pizza, salad, softdrinks, restaurant">
     <meta name="description" content="order pizza, salad and softdrinks at tonys pizza factory. We're a little restaurant in Chicago. Here you can give us a feedback.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/stylesheet.css">
     <title>Feedback</title>
 </head>
 <body>
-    <header>
-        <!-- Navigation-Bar-Information -->
-        <nav>
-            <a id="mainlink" href="index.html">Tony's Pizza Factory</a>
-            <ul>
-                <li><a href="pizza.html">Pizza</a></li>
-                <li><a href="salad.html">Salad</a></li>
-                <li><a href="softdrinks.html">Soft drinks</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <!-- Navigation-Bar-Information-->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <a id="mainlink" class="navbar-brand" href="index.html">Tony's Pizza Factory</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#togglethenavbar" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="togglethenavbar">
+          <ul class="navbar-nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="pizza.html">Pizza</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="salad.html">Salad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="softdrinks.html">Soft drinks</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+          </ul>
+      </div>
+    </nav>
+  </header>
 
     <!-- Content of the Website -->
     <div id="content">
-      <h1>Tell us what you think</h1>
+      <h1 class="text-center mb-4">Tell us what you think</h1>
 
-      <form action="#" method="post">
-        <p>How do you like our pizza?</p>
-        <div class="radio_button">
-          <label><input type="radio" name="rating_pizza" value="awesome"> Awesome</label>
-          <label><input type="radio" name="rating_pizza" value="good"> Good</label>
-          <label><input type="radio" name="rating_pizza" value="okay"> Okay</label>
-          <label><input type="radio" name="rating_pizza" value="poor"> Poor</label>
-        </div>
+      <div class="row m-2">
+        <form action="#" method="post" class="col-12">
+          <div class="row mb-2">
+            <div class="col-12 text-left col-sm-4 text-md-right">How do you like our pizza?</div>
+            <div class="btn-group d-block d-md-inline-flex col-md-7" data-toggle="buttons">
+              <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="awesome" checked>Awesome</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="good">Good</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay">Okay</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="poor">Poor</label>
+            </div>
+          </div>
 
-        <p>What do you think about our prizes?</p>
-        <div class="radio_button">
-          <label><input type="radio" name="rating_pizza" value="fair"> Fair</label>
-          <label><input type="radio" name="rating_pizza" value="okay"> Okay</label>
-          <label><input type="radio" name="rating_pizza" value="expensive"> Expensive</label>
-        </div>
-        <p><label>Your name? <input type="text" name="name"></label></p>
-        <p><label>Your e-mail address? <input type="email" name="email"></label></p>
+          <div class="row mb-2">
+            <div class="col-12 text-left col-sm-4 text-md-right">What do you think about our prizes?</div>
+            <div class="btn-group d-block d-sm-inline-flex col-sm-7" data-toggle="buttons">
+              <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="fair" checked> Fair</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay"> Okay</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="expensive"> Expensive</label>
+            </div>
+          </div>
 
-        <p><label>
-            What can we do better?
-            <textarea name="comment" rows="5" cols="60"></textarea>
-        </label></p>
-        <input type="submit" value="Send">
-      </form>
+          <div class="row mb-2">
+            <div class="input-group">
+              <label class="row col-12">
+                <div class="col-12 text-left col-sm-4 text-md-right">
+                  Your name?
+                </div>
+                <input type="text" name="name" class="col-12 col-sm-7 ml-4 form-control">
+              </label>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="input-group">
+              <label class="row col-12">
+                <div class="col-12 text-left col-sm-4 text-md-right">
+                  Your e-mail address?
+                </div>
+                <input type="email" name="email" class="col-12 col-sm-7 ml-4 form-control">
+              </label>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="input-group">
+              <label class="row col-12">
+                <div class="col-12 text-left col-sm-4 text-md-right">
+                  What can we do better?
+                </div>
+                <textarea name="comment" rows="5" cols="60" class="col-12 col-sm-7 ml-4 form-control"></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+              <input type="submit" value="Send" class="btn btn-outline-primary btn-lg btn-block col-sm-3 col-md-2 btn-sm-inline text-center">
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- Footer-Information -->
-    <footer>
-        <div class="openinghours">
-            Hours: <br>
-            Mon-Thu: <time class="mon_til_thu_start" datetime="11:00">11 a.m.</time> - <time class="mon_til_thu_end" datetime="23:00">23 p.m.</time><br>
-            Fri-Sat: <time class="fri_til_sat_start" datetime="11:00">11 a.m.</time> - <time class="fri_til_sat_end" datetime="00:00">24 p.m.</time><br>
-            Sunday closed
-        </div>
-        <div class="rating">
-            <q>The Pizzeria is one place I have been wanting to
-                visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
-            - Jimmy
-        </div>
-        <div class="address">
-            Address: <br>
-            Tony's Pizza Factory<br>
-            2122 N Clark St<br>
-            Chicago, IL 60614, USA
+    <footer class="bg-faded">
+        <div class="row">
+          <div class="openinghours col-md-3">
+              Hours: <br>
+              Mon-Thu: <time class="mon_til_thu_start" datetime="11:00">11 a.m.</time> - <time class="mon_til_thu_end" datetime="23:00">23 p.m.</time><br>
+              Fri-Sat: <time class="fri_til_sat_start" datetime="11:00">11 a.m.</time> - <time class="fri_til_sat_end" datetime="00:00">24 p.m.</time><br>
+              Sunday closed
+          </div>
+          <div class="rating col-md-6 d-none d-md-block">
+              <q>The Pizzeria is one place I have been wanting to
+                  visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
+              - Jimmy
+          </div>
+          <div class="address col-md-3 d-none d-md-block">
+              Address: <br>
+              Tony's Pizza Factory<br>
+              2122 N Clark St<br>
+              Chicago, IL 60614, USA
+          </div>
         </div>
     </footer>
+
+    <!-- Bootstrap 2 -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 </body>
 </html>

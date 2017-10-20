@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="pizza, salad, softdrinks, restaurant">
     <meta name="description" content="order pizza, salad and softdrinks at tonys pizza factory. We're a little restaurant in Chicago">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <!--<link rel="stylesheet" href="css/stylesheet.css">-->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheetbootstrap.css">
     <title>Salad</title>
 </head>
 <body>
@@ -23,49 +27,95 @@
 
     <!-- Content of the Website -->
     <div id="content">
-      <h1>Salad</h1>
-      <div id="greensalad" class="infobox">
-      	<img src="#" alt="green salad" />
-  	    <h2>Green salad with tomatoe</h2>
-      	<p class="ingredients">Iceberg lettuce, tomatoes</p>
-        <select class="dressing">
-            <option value="italian">Italian dressing</option>
-            <option value="french">French dressing</option>
-        </select>
-      	<span class="price">4$</span>
-      </div>
+      <h1  class="text-center">Salad</h1>
+      <div class="row justify-content-center">
+        <div id="greensalad" class="col-10 col-md-3 p-md-4 mb-2">
+          <div class="row">
+              <img src="images/salad.png" class="col-12 m-0 mb-2" alt="green salad" />
+          </div>
+          <div class="row">
+            <h2 class="col-12 pt-2">Green salad with tomatoe</h2>
+          	<p class="ingredients col-12 mb-2">Iceberg lettuce, tomatoes</p>
+          </div>
+          <div class="row">
+            <select class="col-5 ml-3 custom-select">
+                <option value="italian">Italian dressing</option>
+                <option value="french">French dressing</option>
+            </select>
+            <div class="col-3 text-right align-self-center">
+              <span class="price">4$</span>
+            </div>
+            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
+              <img src="images/cart.png" class="cart" alt="shopping cart" />
+            </div>
+          </div>
+        </div>
 
-      <div id="tomatosalad" class="infobox">
-      	<img src="#" alt="tomato salad" />
-    		<h2>Tomato salad with mozzarella</h2>
-    		<p class="ingredients">Tomatoes, mozzarella</p>
-        <select class="dressing">
-            <option value="italian">Italian dressing</option>
-            <option value="french">French dressing</option>
-        </select>
-        <span class="price">5$</span>
-      </div>
+        <div id="tomatosalad" class="col-10 col-md-3 p-md-4 mb-2">
+          <div class="row">
+              <img src="images/salad.png" class="col-12 m-0 mb-2" alt="tomato salad" />
+          </div>
+          <div class="row">
+            <h2 class="col-12 pt-2">Tomato salad with mozzarella</h2>
+          	<p class="ingredients col-12 mb-2">Tomatoes, mozzarella</p>
+          </div>
+          <div class="row">
+            <select class="col-5 ml-3 custom-select">
+                <option value="italian">Italian dressing</option>
+                <option value="french">French dressing</option>
+            </select>
+            <div class="col-3 text-right align-self-center">
+              <span class="price">5$</span>
+            </div>
+            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
+              <img src="images/cart.png" class="cart" alt="shopping cart" />
+            </div>
+          </div>
+        </div>
 
-      <div id="fieldsalad" class="infobox">
-    		<img src="#" alt="field salad" />
-    		<h2>Field salad with egg</h2>
-    		<p class="ingredients">Field salad, egg</p>
-        <select class="dressing">
-            <option value="italian">Italian dressing</option>
-            <option value="french">French dressing</option>
-        </select>
-    		<span class="price">4$</span>
-      </div>
+        <div id="fieldsalad" class="col-10 col-md-3 p-md-4 mb-2">
+          <div class="row">
+              <img src="images/salad.png" class="col-12 m-0 mb-2" alt="field salad" />
+          </div>
+          <div class="row">
+            <h2 class="col-12 pt-2">Field salad with egg</h2>
+          	<p class="ingredients col-12 mb-2">Field salad, egg</p>
+          </div>
+          <div class="row">
+            <select class="col-5 ml-3 custom-select">
+                <option value="italian">Italian dressing</option>
+                <option value="french">French dressing</option>
+            </select>
+            <div class="col-3 text-right align-self-center">
+              <span class="price">4$</span>
+            </div>
+            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
+              <img src="images/cart.png" class="cart" alt="shopping cart" />
+            </div>
+          </div>
+        </div>
 
-      <div id="rocket" class="infobox">
-    		<img src="#" alt="rocket" />
-    		<h2>Rocket with Parmesan</h2>
-    		<p class="ingredients">Rocket, parmesan</p>
-        <select class="dressing">
-            <option value="italian">Italian dressing</option>
-            <option value="french">French dressing</option>
-        </select>
-    		<span class="price">5$</span>
+        <div id="rocket" class="col-10 col-md-3 p-md-4 mb-2">
+          <div class="row">
+              <img src="images/salad.png" class="col-12 m-0 mb-2" alt="rocket" />
+          </div>
+          <div class="row">
+            <h2 class="col-12 pt-2">Rocket with Parmesan</h2>
+          	<p class="ingredients col-12 mb-2">Rocket, parmesan</p>
+          </div>
+          <div class="row">
+            <select class="col-5 ml-3 custom-select">
+                <option value="italian">Italian dressing</option>
+                <option value="french">French dressing</option>
+            </select>
+            <div class="col-3 text-right align-self-center">
+              <span class="price">5$</span>
+            </div>
+            <div class="col-3 col-md-2 col-ld-3 text-center">
+              <img src="images/cart.png" class="cart" alt="shopping cart" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -91,5 +141,10 @@
             Chicago, IL 60614, USA
         </div>
     </footer>
+
+    <!-- Bootstrap 2 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
 </body>
 </html>

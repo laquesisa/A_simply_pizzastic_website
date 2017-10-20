@@ -1,0 +1,55 @@
+body{
+  font-size: 100%;
+}
+h1{
+  font-size: 3em;
+}
+h2{
+  font-size: 2em;
+}
+span.price{
+  font-size: 2em;
+}
+p.ingredients{
+  font-size: 1em;
+}
+.cart{
+  height: 2.5em;
+  width: 2.5em;
+}
+@media (min-width: 768px){
+  h1{
+    font-size: 3em;
+  }
+  h2{
+    font-size: 1em;
+  }
+  span.price{
+    font-size: 1em;
+  }
+  p.ingredients{
+    font-size: 0.75em;
+  }
+  .cart{
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
+@media (min-width: 1200px){
+  h1{
+    font-size: 3em;
+  }
+  h2{
+    font-size: 2em;
+  }
+  span.price{
+    font-size: 2em;
+  }
+  p.ingredients{
+    font-size: 1em;
+  }
+  .cart{
+    height: 2.5em;
+    width: 2.5em;
+  }
+}

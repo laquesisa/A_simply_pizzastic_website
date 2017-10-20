@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Pizza</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="pizza, salad, softdrinks, restaurant">
     <meta name="description" content="order pizza, salad and softdrinks at tonys pizza factory. We're a little restaurant in Chicago">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <title>Pizza</title>
+    <!--<link rel="stylesheet" href="css/stylesheet.css">-->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheetbootstrap.css">
 </head>
 <body>
     <header>
@@ -23,62 +26,139 @@
 
     <!-- Content of the Website -->
     <div id="content">
-      <h1>Pizza</h1>
-      <div id="piccante" class="infobox">
-          <img src="#" alt="Piccante" />
-          <h2>Piccante</h2>
-  		    <p class="ingredients">Tomato, mozzarela, spicy salami, chillies, oregano</p>
-  		    <span class="price">16$</span>
-      </div>
+        <h1 class="text-center">Pizza</h1>
+        <div class="row justify-content-center">
+            <div id="piccante" class="col-10 col-md-3 p-md-4 mb-2">
+                <div class="row">
+                    <img src="images/pizza.png" class="col-12 m-0 mb-2" alt="Piccante" />
+                </div>
+                <div class="row">
+                    <h2 class="col-6 pt-2">Piccante</h2>
+                    <div class="col-3 text-right">
+                      <span class="price">16$</span>
+                    </div>
+                    <div class="col-3 col-md-2 col-ld-3 text-center">
+                      <img src="images/cart.png" class="cart" alt="shopping cart" />
+                    </div>
+                    <p class="ingredients col-12 mb-0">Tomato, mozzarela, spicy salami, chillies, oregano</p>
+                </div>
+            </div>
 
-      <div id="giardino" class="infobox">
-          <img src="#" alt="Giardino" />
-          <h2>Giardino</h2>
-  		    <p class="ingredients">Tomato, mozzarela, artichokes, fresh mushrooms</p>
-  		    <span class="price">14$</span>
-      </div>
+            <div id="giardino" class="col-10 col-md-3 p-md-4 mb-2">
+                <div class="row">
+                    <img src="images/pizza.png" class="col-12 m-0 mb-2" alt="Giardino" />
+                </div>
+                <div class="row">
+                    <h2 class="col-6 pt-2">Giardino</h2>
+                    <div class="col-3 text-right">
+                      <span class="price">14$</span>
+                    </div>
+                    <div class="col-3 col-md-2 col-ld-3 text-center">
+                      <img src="images/cart.png" class="cart" alt="shopping cart" />
+                    </div>
+          		      <p class="ingredients col-12 mb-0">Tomato, mozzarela, artichokes, fresh mushrooms</p>
+    		        </div>
+            </div>
 
-      <div id="proscefun" class="infobox">
-        <img src="#" alt="Prosciutto e funghi" />
-        <h2>Prosciutto e funghi</h2>
-    		<p class="ingredients">Tomato, mozzarela, ham, fresh mushrooms, oregano</p>
-    		<span class="price">15$</span>
-      </div>
+            <div id="proscefun" class="col-10 col-md-3 p-md-4 mb-2">
+                <div class="row">
+                    <img src="images/pizza.png" class="col-12 m-0 mb-2" alt="Prosciutto e funghi" />
+                </div>
+                <div class="row">
+                    <h2 class="col-6 pt-2">Prosciutto e funghi</h2>
+                    <div class="col-3 text-right">
+                      <span class="price">15$</span>
+                    </div>
+                    <div class="col-3 col-md-2 col-ld-3 text-center">
+                      <img src="images/cart.png" class="cart" alt="shopping cart" />
+                    </div>
+                    <p class="ingredients col-12 mb-0">Tomato, mozzarela, ham, fresh mushrooms, oregano</p>
+                </div>
+            </div>
 
-      <div id="quattroform" class="infobox">
-        <img src="#" alt="Quattro formaggi" />
-        <h2>Quattro formaggi</h2>
-    		<p class="ingredients">Tomato, mozzarela, parmesan, gorgonzola (blue...)</p>
-    		<span class="price">13$</span>
-  	  </div>
 
-    	<div id="quattrosta" class="infobox">
-        <img src="#" alt="Quattro stagioni" />
-        <h2>Quattro stagioni</h2>
-    		<p class="ingredients">Tomato, mozzarela, ham, artishokes, fresh mushrooms</p>
-    		<span class="price">17$</span>
-    	</div>
+            <div id="quattroform" class="col-10 col-md-3 p-md-4 mb-2">
+                <div class="row">
+                    <img src="images/pizza.png" class="col-12 m-0 mb-2" alt="Quattro formaggi" />
+                </div>
+                <div class="row">
+                  <h2 class="col-6 pt-2">Quattro formaggi</h2>
+                  <div class="col-3 text-right">
+                    <span class="price">13$</span>
+                  </div>
+                  <div class="col-3 col-md-2 col-ld-3 text-center">
+                    <img src="images/cart.png" class="cart" alt="shopping cart" />
+                  </div>
+          		    <p class="ingredients col-12 mb-0">Tomato, mozzarela, parmesan, gorgonzola (blue...)</p>
+                </div>
+            </div>
+        </div>
 
-    	<div id="stromboli" class="infobox">
-        <img src="#" alt="Stromboli" />
-      	<h2>Stromboli</h2>
-    		<p class="ingredients">Tomato, mozzarela, fresh chillies, olives, oregano</p>
-    		<span class="price">12$</span>
-      </div>
+        <div class="row justify-content-center">
+      	     <div id="quattrosta" class="col-10 col-md-3 p-md-4 mb-2">
+                 <div class="row">
+                     <img src="images/pizza.png" class="col-12 m-0 mb-2" alt="Quattro stagioni" />
+                 </div>
+                 <div class="row">
+                    <h2 class="col-6 pt-2">Quattro stagioni</h2>
+                    <div class="col-3 text-right">
+                      <span class="price">17$</span>
+                    </div>
+                    <div class="col-3 col-md-2 col-ld-3 text-center">
+                      <img src="images/cart.png" class="cart" alt="shopping cart" />
+                    </div>
+          		      <p class="ingredients col-12 mb-0">Tomato, mozzarela, ham, artishokes, fresh mushrooms</p>
+                 </div>
+      	     </div>
 
-    	<div id="verde" class="infobox">
-        <img src="#" alt="Verde" />
-      	<h2>Verde</h2>
-    		<p class="ingredients">Tomato, mozzarela, broccoli, spinach, oregano</p>
-    		<span class="price">13$</span>
-    	</div>
+      	     <div id="stromboli" class="col-10 col-md-3 p-md-4 mb-2">
+                 <div class="row">
+                     <img src="images/pizza.png" class="col-12 m-0 mb-2" alt="Stromboli" />
+                 </div>
+                 <div class="row">
+            	      <h2 class="col-6 pt-2">Stromboli</h2>
+                    <div class="col-3 text-right">
+                      <span class="price">12$</span>
+                    </div>
+                    <div class="col-3 col-md-2 col-ld-3 text-center">
+                      <img src="images/cart.png" class="cart" alt="shopping cart" />
+                    </div>
+          		      <p class="ingredients col-12 mb-0">Tomato, mozzarela, fresh chillies, olives, oregano</p>
+                 </div>
+             </div>
 
-    	<div id="rustica" class="infobox">
-        <img src="#" alt="Rustica" />
-      	<h2>Rustica</h2>
-    		<p class="ingredients">Tomato, mozzarela, ham, bacon, onions, garlic, oregano</p>
-    		<span class="price">15$</span>
-    	</div>
+      	     <div id="verde" class="col-10 col-md-3 p-md-4 mb-2">
+                 <div class="row">
+                     <img src="images/pizza.png" class="col-12 m-0 mb-2" alt="Verde" />
+                 </div>
+                 <div class="row">
+            	      <h2 class="col-6 pt-2">Verde</h2>
+                    <div class="col-3 text-right">
+                      <span class="price">13$</span>
+                    </div>
+                    <div class="col-3 col-md-2 col-ld-3 text-center">
+                      <img src="images/cart.png" class="cart" alt="shopping cart" />
+                    </div>
+          		      <p class="ingredients col-12 mb-0">Tomato, mozzarela, broccoli, spinach, oregano</p>
+                 </div>
+      	     </div>
+
+      	     <div id="rustica" class="col-10 col-md-3 p-md-4 mb-2">
+                 <div class="row">
+                     <img src="images/pizza.png" class="col-12 m-0 mb-2" alt="Rustica" />
+                 </div>
+                 <div class="row">
+            	      <h2 class="col-6 pt-2">Rustica</h2>
+                    <div class="col-3 text-right">
+                      <span class="price">15$</span>
+                    </div>
+                    <div class="col-3 col-md-2 col-ld-3 text-center">
+                      <img src="images/cart.png" class="cart" alt="shopping cart" />
+                    </div>
+          		      <p class="ingredients col-12 mb-0">Tomato, mozzarela, ham, bacon, onions, garlic, oregano</p>
+                </div>
+      	     </div>
+        </div>
     </div>
 
     <!-- Footer-Information -->
@@ -90,8 +170,7 @@
             Sunday closed
         </div>
         <div class="rating">
-            <q>The Pizzeria is one place I have been wanting to
-                visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
+            <q>The Pizzeria is one place I have been wanting to visit for a long time. The reason being their Rustica pizza which absolutely blew me away.</q>
             - Jimmy
         </div>
         <div class="address">
@@ -101,5 +180,10 @@
             Chicago, IL 60614, USA
         </div>
     </footer>
+
+    <!-- Bootstrap 2 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
 </body>
 </html>

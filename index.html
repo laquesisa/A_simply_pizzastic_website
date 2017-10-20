@@ -6,30 +6,20 @@
     <meta name="description" content="order pizza, salad and softdrinks at tonys pizza factory. We're a little restaurant in Chicago">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap_extension.css">
-    <!--<link rel="stylesheet" href="css/stylesheet.css">-->
-    <!-- Latest compiled and minified CSS
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-
-
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="icon" href="images/icon.png">
     <title>Tony's Pizza Factory</title>
-
 </head>
 <body>
     <header>
-
-
-
-        <!-- Navigation-Bar-Information-->
+      <!-- Navigation-Bar-Information-->
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
           <a id="mainlink" class="navbar-brand" href="index.html">Tony's Pizza Factory</a>
-
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-          <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
-          <ul class="navbar-nav nav-pills">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#togglethenavbar" >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse float-right" id="togglethenavbar">
+          <ul class="navbar-nav nav-pills pull-right">
               <li class="nav-item active">
                 <a class="nav-link" href="pizza.html">Pizza</a>
               </li>
@@ -55,11 +45,12 @@
     <!-- Content of the Website -->
     <div id="content">
       <h1>Welcome to Tony's Pizza Factory</h1>
-        <img src="./images/restaurant.png" class="rounded img-fluid mx-auto d-block" width="300" alt="inside the restaurant" />
-      <div class="allthings">
-        <a href="pizza.html"><img id="pizzaimg" class="rounded float-left" src="./images/pizza.png" width="200" alt="Pizza" /></a>
-        <a href="salad.html"><img id="saladimg" class="rounded" src="./images/salad.png" width="200" alt="Salad" /></a>
-        <a href="softdrinks.html"><img id="softdrinkimg" class="rounded float-right" src="./images/softdrink.png" width="200" alt="Softdrinks" /></a>
+        <img src="./images/restaurant.png" class="rounded img-fluid mx-auto d-block" alt="inside the restaurant" />
+        <br>
+      <div class="d-flex justify-content-center">
+        <a href="pizza.html"><img class="rounded clickable" src="./images/pizza_home.png" alt="Pizza" /></a>
+        <a href="salad.html"><img class="rounded clickable" src="./images/salad_home.png" alt="Salad" /></a>
+        <a href="softdrinks.html"><img class="rounded clickable" src="./images/softdrink_home.png" alt="Softdrinks" /></a>
       </div>
     </div>
     <!-- Footer-Information -->

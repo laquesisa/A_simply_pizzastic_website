@@ -1,181 +1,48 @@
+/* Style for the footer, that sticks at the bottom of the page*/
 body {
-	width: 100%;
-	font-family: "Duru Sans", Verdana, sans-serif;
-	font-size: 100%;
-	padding: 0;
-	margin: 0;
-	display: flex;
+  display: flex;
 	min-height: 100vh;
 	flex-direction: column;
 }
 
-header, footer {
-	background-color: #7399d6;
-	width: 100%;
-	box-shadow: 0px 0px 9px 2px #000;
-}
-
-header {
-	line-height: 4em;
-}
-
 #content {
-	/*is be used to get the footer stick to the bottom*/
-	padding: 0 1em;
-	flex: 1;
+  padding: 1em;
+  flex: 1;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+footer {
+  padding: 1em 0;
+  color: #000;
 }
 
 h1 {
-	font-size: 3rem;
-	text-align: center;
-}
-
-h2{
-	font-weight: normal;
-}
-
-/*-------- Style for the navigation-bar ------------*/
-ul {
-	margin: 0;
-}
-
-nav ul {
-	list-style: none;
-	text-align: right;
-	margin: 0 1em 0 0;
-}
-
-nav li {
- display: inline-block;
-}
-
-header li a:link {
-	text-decoration: none;
-	margin: 0 0.5em;
-	text-align: right;
-	color: #000;
-	padding: 2em 0em;
-}
-
-#mainlink:link {
-	color: #000;
-	float: left;
-	margin: 0 0 0 1em;
-	text-decoration: none;
-	/*test*/
-}
-
-header li a:visited, #mainlink:visited {
-	color: #000;
-}
-
-header li a:focus, #mainlink:focus {
-	color: #fff;
-}
-
-
-header li a:hover, #mainlink:hover {
-	color: #fff;
-}
-
-header li a:active, #mainlink:active {
-	color: #fff;
-	text-decoration: underline;
-}
-
-
-/*--------- Style for the footer -----------------*/
-footer {
-	display: inline-block;
-	line-height: 1.5;
-	margin: 1em 0 0 0;
-}
-
-.openinghours{
-	padding: 2em 0;
-	text-align: left;
-	float: left;
-	width: 20%;
-	position: relative;
-	left: 2.5%;
-}
-
-.rating {
-	padding: 2em 0;
-	float: left;
-	vertical-align: top;
-	text-align: center;
-	width: 50%;
-	position: absolute;
-	left: 25%;
-}
-
-.address {
-	text-align: left;
-	padding: 2em 0 2em 2.5%;
-	width: 20%;
-	position: absolute;
-	left: 77.50%;
-
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 
 
-/*----- Style for the pictures on the index-page --------*/
-.restaurantimg {
-	text-align: center;
-}
-
-.allthings {
-	text-align: center;
-}
-
-.allthings img {
-	margin: 0.5em;
+/*Style for the images in the homepage */
+img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
 }
 
 
-/*--------- Style for the form on the feedback-page ------------*/
-input[type="submit"] {
-	background-color: #d6d6d6;
-	border: none;
-	font-weight: bold;
-	color: #374784;
-	padding: 0.75em 1em;
-	cursor: pointer;
-	margin-top: 5em;
-	position: absolute;
-	left: 40%;
-
+.clickable{
+  padding: 6px;
 }
 
-input[type="submit"]:hover {
-	background-color: #374784;
-	color: #d6d6d6;
+.clickable:focus, .clickable:hover{
+    box-shadow: 0 0 10px #000;
 }
 
-input[type="text"], input[type="email"], textarea {
-	width: 30em;
-	position: absolute;
-	left: 40%;
-	color: #3d3d3d;
-}
-
-.radio_button {
-	position: absolute;
-	left: 40%;
-	margin-top: -2.2em;
-}
-
-.radio_button label {
-	margin-right: 1em;
-}
-
-form {
-	margin-bottom: 10em;
-}
-
-form p {
-	text-align: right;
-	padding-right: 62%;
+.img-fluid{
+  max-width: 380px;
 }

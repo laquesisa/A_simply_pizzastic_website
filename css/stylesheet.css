@@ -46,3 +46,7 @@ img {
 .img-fluid{
   max-width: 380px;
 }
+
+.centering{
+  text-align: center;
+}

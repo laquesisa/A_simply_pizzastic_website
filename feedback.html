@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="pizza, salad, softdrinks, restaurant">
     <meta name="description" content="order pizza, salad and softdrinks at tonys pizza factory. We're a little restaurant in Chicago. Here you can give us a feedback.">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/stylesheetbootstrap.css">
     <title>Feedback</title>
 </head>
-<body>
+<body class="p-2">
     <header>
         <!-- Navigation-Bar-Information -->
         <nav>
@@ -23,32 +28,70 @@
 
     <!-- Content of the Website -->
     <div id="content">
-      <h1>Tell us what you think</h1>
+      <h1 class="text-center mb-4">Tell us what you think</h1>
 
-      <form action="#" method="post">
-        <p>How do you like our pizza?</p>
-        <div class="radio_button">
-          <label><input type="radio" name="rating_pizza" value="awesome"> Awesome</label>
-          <label><input type="radio" name="rating_pizza" value="good"> Good</label>
-          <label><input type="radio" name="rating_pizza" value="okay"> Okay</label>
-          <label><input type="radio" name="rating_pizza" value="poor"> Poor</label>
-        </div>
+      <div class="row m-2">
+        <form action="#" method="post" class="col-12">
+          <div class="row mb-2">
+            <div class="col-12 text-left col-sm-4 text-md-right">How do you like our pizza?</div>
+            <div class="btn-group d-block d-md-inline-flex col-md-7" data-toggle="buttons">
+              <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="awesome" checked>Awesome</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="good">Good</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay">Okay</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="poor">Poor</label>
+            </div>
+          </div>
 
-        <p>What do you think about our prizes?</p>
-        <div class="radio_button">
-          <label><input type="radio" name="rating_pizza" value="fair"> Fair</label>
-          <label><input type="radio" name="rating_pizza" value="okay"> Okay</label>
-          <label><input type="radio" name="rating_pizza" value="expensive"> Expensive</label>
-        </div>
-        <p><label>Your name? <input type="text" name="name"></label></p>
-        <p><label>Your e-mail address? <input type="email" name="email"></label></p>
+          <div class="row mb-2">
+            <div class="col-12 text-left col-sm-4 text-md-right">What do you think about our prizes?</div>
+            <div class="btn-group d-block d-sm-inline-flex col-sm-7" data-toggle="buttons">
+              <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="fair" checked> Fair</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay"> Okay</label>
+              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="expensive"> Expensive</label>
+            </div>
+          </div>
 
-        <p><label>
-            What can we do better?
-            <textarea name="comment" rows="5" cols="60"></textarea>
-        </label></p>
-        <input type="submit" value="Send">
-      </form>
+          <div class="row mb-2">
+            <div class="input-group">
+              <label class="row col-12">
+                <div class="col-12 text-left col-sm-4 text-md-right">
+                  Your name?
+                </div>
+                <input type="text" name="name" class="col-12 col-sm-7 ml-4 form-control">
+              </label>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="input-group">
+              <label class="row col-12">
+                <div class="col-12 text-left col-sm-4 text-md-right">
+                  Your e-mail address?
+                </div>
+                <input type="email" name="email" class="col-12 col-sm-7 ml-4 form-control">
+              </label>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="input-group">
+              <label class="row col-12">
+                <div class="col-12 text-left col-sm-4 text-md-right">
+                  What can we do better?
+                </div>
+                <textarea name="comment" rows="5" cols="60" class="col-12 col-sm-7 ml-4 form-control"></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+              <input type="submit" value="Send" class="btn btn-outline-primary btn-lg btn-block col-sm-3 col-md-2 btn-sm-inline text-center">
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- Footer-Information -->
@@ -71,5 +114,11 @@
             Chicago, IL 60614, USA
         </div>
     </footer>
+
+    <!-- Bootstrap 2 -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 </body>
 </html>

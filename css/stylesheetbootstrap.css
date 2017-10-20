@@ -17,6 +17,9 @@ p.ingredients{
   height: 2.5em;
   width: 2.5em;
 }
+.btn-block + .btn-block{
+  margin-top: 0;
+}
 @media (min-width: 768px){
   h1{
     font-size: 3em;

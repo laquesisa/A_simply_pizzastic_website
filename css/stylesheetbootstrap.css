@@ -23,6 +23,7 @@ p.ingredients{
   }
   h2{
     font-size: 1em;
+    font-weight: bold;
   }
   span.price{
     font-size: 1em;

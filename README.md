@@ -1,5 +1,7 @@
 ## This webite is for a school project at the FFHS.
 
+Please use Firefox to view this website!
+
 ### ----------- 20.10.2017 Version 1.0.2 ------------
 Finished the Style-Sheet. Responsive Design was created with bootstrap-v4-alpha.
 The Favicon is by the website: https://www.flaticon.com/

@@ -44,10 +44,10 @@
       <h1 class="text-center mb-4">Tell us what you think</h1>
 
       <div class="row m-2">
-        <form action="#" method="post" class="col-12">
+        <form action="#" method="post" class="col-12 nop">
           <div class="row mb-2">
             <div class="col-12 text-left col-sm-4 text-md-right">How do you like our pizza?</div>
-            <div class="btn-group d-block d-md-inline-flex col-md-7" data-toggle="buttons">
+            <div class="btn-group d-block d-md-inline-flex col-sm-7 nop" data-toggle="buttons">
               <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="awesome" checked>Awesome</label>
               <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="good">Good</label>
               <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay">Okay</label>
@@ -57,7 +57,7 @@
 
           <div class="row mb-2">
             <div class="col-12 text-left col-sm-4 text-md-right">What do you think about our prizes?</div>
-            <div class="btn-group d-block d-sm-inline-flex col-sm-7" data-toggle="buttons">
+            <div class="btn-group d-block d-md-inline-flex col-sm-7 nop" data-toggle="buttons">
               <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="fair" checked> Fair</label>
               <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay"> Okay</label>
               <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="expensive"> Expensive</label>
@@ -66,41 +66,41 @@
 
           <div class="row mb-2">
             <div class="input-group">
-              <label class="row col-12">
+              <label class="row col-12 nop">
                 <div class="col-12 text-left col-sm-4 text-md-right">
                   Your name?
                 </div>
-                <input type="text" name="name" class="col-12 col-sm-7 ml-4 form-control">
+                <input type="text" name="name" id="name" class="col-12 col-sm-7 form-control btn-outline-primary">
               </label>
             </div>
           </div>
 
           <div class="row mb-2">
             <div class="input-group">
-              <label class="row col-12">
+              <label class="row col-12 nop">
                 <div class="col-12 text-left col-sm-4 text-md-right">
                   Your e-mail address?
                 </div>
-                <input type="email" name="email" class="col-12 col-sm-7 ml-4 form-control">
+                <input type="email" name="email" class="col-12 col-sm-7 form-control btn-outline-primary">
               </label>
             </div>
           </div>
 
           <div class="row mb-2">
             <div class="input-group">
-              <label class="row col-12">
+              <label class="row col-12 nop">
                 <div class="col-12 text-left col-sm-4 text-md-right">
                   What can we do better?
                 </div>
-                <textarea name="comment" rows="5" cols="60" class="col-12 col-sm-7 ml-4 form-control"></textarea>
+                <textarea name="comment" rows="5" cols="60" class="col-12 col-sm-7 form-control btn-outline-primary"></textarea>
               </label>
             </div>
           </div>
 
           <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-8">
-              <input type="submit" value="Send" class="btn btn-outline-primary btn-lg btn-block col-sm-3 col-md-2 btn-sm-inline text-center">
+            <div class="col-sm-8 nop">
+              <input value="Send" class="btn btn-outline-primary btn-lg btn-block col-sm-3 col-md-2 btn-sm-inline text-center" onclick="chkFormular();"></input>
             </div>
           </div>
         </form>
@@ -134,6 +134,19 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+    <script>
+      function chkFormular(){
+        var formular = document.getElementsByTagName("form");
+        var name = document.getElementById("name");
+        console.log("1");
+        if(name.value ==""){
+          var pname = document.createElement("div");
+          var alname = document.createTextNode("Bitte geben Sie ihren Namen ein!");
+          pname.appendChild(alname);
+          console.log("hallo");
+          //document.formular.name.focus();
+        }
+      }
+    </script>
 </body>
 </html>

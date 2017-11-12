@@ -92,6 +92,10 @@ p.ingredients{
   padding: 0;
 }
 
+.invalid-input{
+  color: red;
+}
+
 /*Responsives Design für die grösseren Bildschirme*/
 
 @media (min-width: 768px){

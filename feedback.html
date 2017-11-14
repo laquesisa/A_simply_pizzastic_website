@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="pizza, salad, softdrinks, restaurant">
-    <meta name="description" content="order pizza, salad and softdrinks at tonys pizza factory. We're a little restaurant in Chicago. Here you can give us a feedback.">
+    <meta name="description" content="Order pizza, salad and softdrinks at Tony's pizza factory. We're a little restaurant in Chicago. Here you can give us a feedback.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/stylesheet.css">
+
+    <link rel="icon" href="images/icon.png">
     <title>Feedback</title>
 </head>
 <body>
   <header>
     <!-- Navigation-Bar-Information-->
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
         <a id="mainlink" class="navbar-brand" href="index.html">Tony's Pizza Factory</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#togglethenavbar" >
           <span class="navbar-toggler-icon"></span>
@@ -43,72 +44,61 @@
     <div id="content">
       <h1 class="text-center mb-4">Tell us what you think</h1>
 
-      <div class="row m-2">
-        <form action="#" method="post" class="col-12">
-          <div class="row mb-2">
-            <div class="col-12 text-left col-sm-4 text-md-right">How do you like our pizza?</div>
-            <div class="btn-group d-block d-md-inline-flex col-md-7" data-toggle="buttons">
-              <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="awesome" checked>Awesome</label>
-              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="good">Good</label>
-              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay">Okay</label>
-              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="poor">Poor</label>
-            </div>
+      <form action="#" method="post" onsubmit="return validation();" class="nop">
+        <div class="row mb-2">
+          <div class="col-sm-4 text-md-right">How do you like our pizza?</div>
+          <div class="btn-group d-block d-md-inline-flex col-sm-7 nop" data-toggle="buttons">
+            <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="awesome" checked>Awesome</label>
+            <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="good">Good</label>
+            <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay">Okay</label>
+            <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="poor">Poor</label>
           </div>
+        </div>
 
-          <div class="row mb-2">
-            <div class="col-12 text-left col-sm-4 text-md-right">What do you think about our prizes?</div>
-            <div class="btn-group d-block d-sm-inline-flex col-sm-7" data-toggle="buttons">
-              <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="fair" checked> Fair</label>
-              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay"> Okay</label>
-              <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="expensive"> Expensive</label>
-            </div>
+        <div class="row mb-2">
+          <div class="col-sm-4 text-md-right">What do you think about our prizes?</div>
+          <div class="btn-group d-block d-md-inline-flex col-sm-7 nop" data-toggle="buttons">
+            <label class="btn btn-outline-primary btn-lg btn-block active"><input type="radio" name="rating_pizza" value="fair" checked> Fair</label>
+            <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="okay"> Okay</label>
+            <label class="btn btn-outline-primary btn-lg btn-block"><input type="radio" name="rating_pizza" value="expensive"> Expensive</label>
           </div>
+        </div>
 
-          <div class="row mb-2">
-            <div class="input-group">
-              <label class="row col-12">
-                <div class="col-12 text-left col-sm-4 text-md-right">
-                  Your name?
-                </div>
-                <input type="text" name="name" class="col-12 col-sm-7 ml-4 form-control">
-              </label>
-            </div>
+        <div class="row mb-2">
+          <label for="name" class="col-sm-4 text-md-right">Your name?</label>
+          <div id="nameDiv" class="col-sm-7 nop">
+            <input type="text" name="name" id="name" class="btn-outline-primary form-control">
+            <div id="invalid_name" class="invalid-input"></div>
           </div>
+        </div>
 
-          <div class="row mb-2">
-            <div class="input-group">
-              <label class="row col-12">
-                <div class="col-12 text-left col-sm-4 text-md-right">
-                  Your e-mail address?
-                </div>
-                <input type="email" name="email" class="col-12 col-sm-7 ml-4 form-control">
-              </label>
-            </div>
+        <div class="row mb-2">
+          <label for="email" class="col-sm-4 text-md-right">Your e-mail address?</label>
+          <div id="emailDiv" class="col-sm-7 nop">
+            <input type="text" name="email" id="email" class="btn-outline-primary form-control">
+            <div id="invalid_email" class="invalid-input"></div>
           </div>
+        </div>
 
-          <div class="row mb-2">
-            <div class="input-group">
-              <label class="row col-12">
-                <div class="col-12 text-left col-sm-4 text-md-right">
-                  What can we do better?
-                </div>
-                <textarea name="comment" rows="5" cols="60" class="col-12 col-sm-7 ml-4 form-control"></textarea>
-              </label>
-            </div>
+        <div class="row mb-2">
+          <label for="critic" class="col-sm-4 text-md-right">What can we do better?</label>
+          <div id="criticDiv" class="col-sm-7 nop">
+            <textarea id= "critic" name="comment" rows="5" cols="60" class="form-control btn-outline-primary"></textarea>
+            <div id="invalid_critic" class="invalid-input"></div>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-8">
-              <input type="submit" value="Send" class="btn btn-outline-primary btn-lg btn-block col-sm-3 col-md-2 btn-sm-inline text-center">
-            </div>
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-8 nop">
+            <input value="Send" class="btn btn-outline-primary btn-lg btn-block col-sm-3 col-md-2 btn-sm-inline text-center" type="submit">
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
 
     <!-- Footer-Information -->
-    <footer class="bg-faded">
+    <footer class="bg-inverse">
         <div class="row">
           <div class="openinghours col-md-3">
               Hours: <br>
@@ -130,10 +120,53 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 2 -->
+    <!-- Bootstrap v4-alpha -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
+    <!-- JS-Code -->
+    <script>
+      function validation() {
+          var name = document.getElementById("name");
+          var email = document.getElementById("email");
+          var critic = document.getElementById("critic");
+          var pname = document.getElementById("invalid_name");
+          var pemail = document.getElementById("invalid_email");
+          var pcritic = document.getElementById("invalid_critic");
+          var pattern = /^[A-Za-z0-9.!#$%&'*+-\/=?^_`{|}~]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]{2,})*$/;
+          var form_okay = true;
+
+          if (name.value === "" || name.value.length === 0 || !name.value) {
+              pname.innerHTML = "Type your name!";
+              name.style.border="3px solid #f00";
+              form_okay = false;
+          }else{
+              name.style.border="1px solid #0275d8";
+              pname.innerHTML =  "";
+          }
+          if (email.value === "" || email.value.length === 0 || !email.value) {
+              pemail.innerHTML = "Type your email!";
+              email.style.border="3px solid #f00";
+              form_okay = false;
+          } else if (!pattern.test(email.value)) {
+              pemail.innerHTML = "'" + email.value + "' is not a valid e-mail address.";
+              email.style.border="3px solid #f00";
+              form_okay = false;
+          }else{
+              email.style.border="1px solid #0275d8";
+              pemail.innerHTML = "";
+          }
+          if(critic.value.length < 50){
+              pcritic.innerHTML = "Type your comment into the text area. It should have at least 50 characters to be valid.";
+              critic.style.border="3px solid #f00";
+              form_okay = false;
+          }else{
+              critic.style.border="1px solid #0275d8";
+              pcritic.innerHTML = "";
+          }
+          return form_okay;
+      }
+    </script>
 </body>
 </html>

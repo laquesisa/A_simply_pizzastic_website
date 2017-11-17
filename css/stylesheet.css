@@ -1,38 +1,37 @@
-/* Style for the footer, that sticks at the bottom of the page*/
+/* Style for the footer, that sticks at the bottom of the page */
 body {
   display: flex;
 	min-height: 100vh;
 	flex-direction: column;
 }
-
 #content {
   padding: 1em;
   flex: 1;
 }
-
 .row {
   margin-right: 0px;
   margin-left: 0px;
 }
-
-footer {
-  padding: 1em 0;
-  color: #000;
+nav {
+  margin-bottom: 1.5em;
 }
-
-/* -----------------------*/
+footer div{
+  padding: 1em 0;
+  color: #fff;
+}
+.price {
+  margin-left: 0.5em;
+}
 
 h1 {
   text-align: center;
   margin-bottom: 1em;
   font-size: 3em;
 }
-
 h2{
   font-size: 2em;
   font-weight: bold;
 }
-
 input{
 border-radius: .25rem;
 }
@@ -46,10 +45,14 @@ p.ingredients{
   height: 2.5em;
   width: 2.5em;
 }
+
+/* The first Button should be as big as the others, not bigger */
 .btn-block + .btn-block{
   margin-top: 0;
 }
-/*Buttons sollen in allen Ecken abgerundet sein, wenn Screen kleiner als md*/
+
+
+/* All Buttons should have rounded corners if the screen's smaller than md */
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle){
   border-radius: .25rem;
 }
@@ -60,30 +63,44 @@ p.ingredients{
   border-radius: .25rem;
 }
 
-/*Style for the images in the homepage */
+
+/* Style for the images in the homepage */
 .homeimg {
     width: 100%;
     max-width: 260px;
-    height: auto;
 }
-
 
 .clickable{
   padding: 6px;
 }
-
 .clickable:focus, .clickable:hover{
     box-shadow: 0 0 10px #000;
 }
-
 .img-fluid{
   max-width: 380px;
+}
+.product_img{
+  height: 100%;
+  padding: 0;
 }
 
 .centering{
   text-align: center;
 }
 
+
+/* Runde die Ecken der Textfelder ab */
+.input-group .form-control:not(:first-child), .input-group-addon:not(:first-child), .input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group > .btn, .input-group-btn:not(:first-child) > .dropdown-toggle, .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .input-group-btn:not(:last-child) > .btn:not(:first-child){
+  border-radius: .25rem;
+}
+
+.nop{
+  padding: 0;
+}
+.invalid-input{
+  color: #f00;
+}
+=======
 .input-group .form-control:not(:first-child), .input-group-addon:not(:first-child), .input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group > .btn, .input-group-btn:not(:first-child) > .dropdown-toggle, .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .input-group-btn:not(:last-child) > .btn:not(:first-child){
   border-radius: .25rem;
 }
@@ -92,27 +109,28 @@ p.ingredients{
   padding: 0;
 }
 
-/*Responsives Design für die grösseren Bildschirme*/
-
+/* Responsives Design für md Bildschirme */
 @media (min-width: 768px){
-  h1{
-    font-size: 3em;
-  }
   h2{
     font-size: 1em;
     font-weight: bold;
   }
+
   span.price{
     font-size: 1em;
   }
   p.ingredients{
     font-size: 0.75em;
   }
+
   .cart{
     height: 1.5em;
     width: 1.5em;
   }
-/*Buttons werden in einer Reihe dargestellt (nicht alle Ecken abrunden)*/
+
+
+  /* Buttons werden in einer Reihe dargestellt (nicht alle Ecken abrunden) */
+
   .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle){
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -127,12 +145,17 @@ p.ingredients{
   .btn-group-lg > .btn, .btn-lg{
     padding: .75rem 0;
   }
+
+  .product_img{
+   object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
 }
 
+/* Responsives Design für grosse Bildschirme */
+
 @media (min-width: 1200px){
-  h1{
-    font-size: 3em;
-  }
   h2{
     font-size: 2em;
   }

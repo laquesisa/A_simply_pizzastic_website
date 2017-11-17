@@ -46,12 +46,12 @@ p.ingredients{
   width: 2.5em;
 }
 
-/* Der erste der Buttons soll gleich gross sein, wie alle andern*/
+/* The first Button should be as big as the others, not bigger */
 .btn-block + .btn-block{
   margin-top: 0;
 }
 
-/* Buttons sollen in allen Ecken abgerundet sein, wenn Screen kleiner als md */
+/* All Buttons should have rounded corners if the screen's smaller than md */
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle){
   border-radius: .25rem;
 }

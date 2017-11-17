@@ -51,6 +51,7 @@ p.ingredients{
   margin-top: 0;
 }
 
+
 /* All Buttons should have rounded corners if the screen's smaller than md */
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle){
   border-radius: .25rem;
@@ -61,6 +62,7 @@ p.ingredients{
 .btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child){
   border-radius: .25rem;
 }
+
 
 /* Style for the images in the homepage */
 .homeimg {
@@ -86,6 +88,7 @@ p.ingredients{
   text-align: center;
 }
 
+
 /* Runde die Ecken der Textfelder ab */
 .input-group .form-control:not(:first-child), .input-group-addon:not(:first-child), .input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group > .btn, .input-group-btn:not(:first-child) > .dropdown-toggle, .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .input-group-btn:not(:last-child) > .btn:not(:first-child){
   border-radius: .25rem;
@@ -96,6 +99,14 @@ p.ingredients{
 }
 .invalid-input{
   color: #f00;
+}
+=======
+.input-group .form-control:not(:first-child), .input-group-addon:not(:first-child), .input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group > .btn, .input-group-btn:not(:first-child) > .dropdown-toggle, .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .input-group-btn:not(:last-child) > .btn:not(:first-child){
+  border-radius: .25rem;
+}
+
+.nop{
+  padding: 0;
 }
 
 /* Responsives Design für md Bildschirme */
@@ -117,7 +128,9 @@ p.ingredients{
     width: 1.5em;
   }
 
+
   /* Buttons werden in einer Reihe dargestellt (nicht alle Ecken abrunden) */
+
   .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle){
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -141,9 +154,10 @@ p.ingredients{
 }
 
 /* Responsives Design für grosse Bildschirme */
+
 @media (min-width: 1200px){
   h2{
-    font-size: 1.5em;
+    font-size: 2em;
   }
   span.price{
     font-size: 2em;

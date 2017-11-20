@@ -1,0 +1,162 @@
+/* Style for the footer, that sticks at the bottom of the page */
+body {
+  display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+#content {
+  padding: 1em;
+  flex: 1;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+nav {
+  margin-bottom: 1.5em;
+}
+footer div{
+  padding: 1em 0;
+  color: #fff;
+}
+.price {
+  margin-left: 0.5em;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 3em;
+}
+h2{
+  font-size: 2em;
+  font-weight: bold;
+}
+input{
+border-radius: .25rem;
+}
+span.price{
+  font-size: 2em;
+}
+p.ingredients{
+  font-size: 1em;
+}
+.cart{
+  height: 2.5em;
+  width: 2.5em;
+}
+
+/* The first Button should be as big as the others, not bigger */
+.btn-block + .btn-block{
+  margin-top: 0;
+}
+
+/* All Buttons should have rounded corners if the screen's smaller than md */
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle){
+  border-radius: .25rem;
+}
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle){
+  border-radius: .25rem;
+}
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child){
+  border-radius: .25rem;
+}
+
+/* Style for the images in the homepage */
+.homeimg {
+    width: 100%;
+    max-width: 260px;
+}
+
+.clickable{
+  padding: 6px;
+}
+.clickable:focus, .clickable:hover{
+    box-shadow: 0 0 10px #000;
+}
+.img-fluid{
+  max-width: 380px;
+}
+.product_img{
+  height: 100%;
+  padding: 0;
+}
+
+.centering{
+  text-align: center;
+}
+
+
+/* The Textinputs should have rounded corners */
+.input-group .form-control:not(:first-child), .input-group-addon:not(:first-child), .input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group > .btn, .input-group-btn:not(:first-child) > .dropdown-toggle, .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .input-group-btn:not(:last-child) > .btn:not(:first-child){
+  border-radius: .25rem;
+}
+
+.nop{
+  padding: 0;
+}
+.invalid-input{
+  color: #f00;
+}
+
+/* Responsive Design for screens md and bigger */
+@media (min-width: 768px){
+  h2{
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  span.price{
+    font-size: 1em;
+  }
+  p.ingredients{
+    font-size: 0.75em;
+  }
+
+  .cart{
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+
+  /* Buttons are displayed in one row (not all corners are rounded) */
+
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle){
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle){
+    border-radius: 0;
+  }
+  .btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child){
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .btn-group-lg > .btn, .btn-lg{
+    padding: .75rem 0;
+  }
+
+  .product_img{
+   object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
+}
+
+/* Responsive Design for big screens */
+
+@media (min-width: 1200px){
+  h2{
+    font-size: 2em;
+  }
+  span.price{
+    font-size: 2em;
+  }
+  p.ingredients{
+    font-size: 1em;
+  }
+  .cart{
+    height: 2.5em;
+    width: 2.5em;
+  }
+}

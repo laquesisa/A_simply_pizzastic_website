@@ -27,9 +27,10 @@ h1 {
   text-align: center;
   margin-bottom: 1em;
   font-size: 3em;
+  font-weight: bold;
 }
 h2{
-  font-size: 2em;
+  font-size: 7vw;
   font-weight: bold;
 }
 input{
@@ -102,7 +103,7 @@ p.ingredients{
 /* Responsive Design for screens md and bigger */
 @media (min-width: 768px){
   h2{
-    font-size: 1em;
+    font-size: 1.8vw;
     font-weight: bold;
   }
 
@@ -146,9 +147,6 @@ p.ingredients{
 /* Responsive Design for big screens */
 
 @media (min-width: 1200px){
-  h2{
-    font-size: 2em;
-  }
   span.price{
     font-size: 2em;
   }

@@ -1,33 +1,34 @@
 function http_get_request(link, type) {
-    request = new XMLHttpRequest();
-    request.open("GET", link, false);
+    var request = new XMLHttpRequest();
+    request.open("GET", link, true);
     request.setRequestHeader("Authorization", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MQ.bYceSpllpyYQixgNzDt7dpCkEojdv3NKD-85XLXfdI4");
     request.setRequestHeader("Content-type", "charset=utf-8");
-    request.send(null);
-    request.onreadystatechange = statechange(type);
-    request.ontimeout = timeout;
-    request.onerror = error;
-}
-
-function statechange(type) {
-    if(request.readyState == 4){
-        if(request.status == 200){
-            var product = JSON.parse(request.responseText);
-            var parentDiv = document.getElementById("content_in_here");
-            for(var i=0;i<product.length;i++){
-                parentDiv.appendChild(show_product(product[i], type));
+    request.onreadystatechange = function () {
+        if(request.readyState === 4){
+            if(request.status === 200) {
+                process(JSON.parse(request.responseText), type);
+            }
+            else {
+                document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + this.status + ")";
             }
         }
+    };
+    request.ontimeout = function () {
+        document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + this.status + ")";
+    };
+    request.onerror = function() {
+        document.getElementById("content_in_here").textContent = "Network Error. Couldn't reach the service. (Status " + this.status + ")";
+    };
+    request.send(null);
+}
+
+function process(product, type) {
+    var parentDiv = document.getElementById("content_in_here");
+    for(var i=0;i<product.length;i++){
+        parentDiv.appendChild(show_product(product[i], type));
     }
 }
 
-function timeout() {
-    document.getElementById("content").textContent = "Timeout. Couldn't reach the service. (Status " + this.status + ")";
-}
-
-function error() {
-    document.getElementById("content").textContent = "Error. Couldn't reach the service. (Status " + this.status + ")";
-}
 
 
 function show_product(product, type){

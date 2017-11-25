@@ -9,15 +9,15 @@ function http_get_request(link, type) {
                 process(JSON.parse(request.responseText), type);
             }
             else {
-                document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + this.status + ")";
+                document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + request.status + ")";
             }
         }
     };
     request.ontimeout = function () {
-        document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + this.status + ")";
+        document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + request.status + ")";
     };
     request.onerror = function() {
-        document.getElementById("content_in_here").textContent = "Network Error. Couldn't reach the service. (Status " + this.status + ")";
+        document.getElementById("content_in_here").textContent = "Network Error. Couldn't reach the service. (Status " + request.status + ")";
     };
     request.send(null);
 }

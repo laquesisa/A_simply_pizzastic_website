@@ -43,94 +43,7 @@
     <!-- Content of the Website -->
     <div id="content">
       <h1  class="text-center">Salad</h1>
-      <div class="row justify-content-center">
-        <div id="greensalad" class="col-10 col-md-3 p-md-4 mb-2">
-          <div class="row">
-              <img src="images/salad.png" class="col-12 m-0 mb-2 product_img" alt="green salad" />
-          </div>
-          <div class="row">
-            <h2 class="col-12 pt-2">Green salad with tomatoe</h2>
-          	<p class="ingredients col-12 mb-2">Iceberg lettuce, tomatoes</p>
-          </div>
-          <div class="row">
-            <select class="col-5 ml-3 custom-select">
-                <option value="italian">Italian dressing</option>
-                <option value="french">French dressing</option>
-            </select>
-            <div class="col-3 text-right align-self-center">
-              <span class="price">4$</span>
-            </div>
-            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
-              <img src="images/cart.png" class="cart" alt="shopping cart" />
-            </div>
-          </div>
-        </div>
-
-        <div id="tomatosalad" class="col-10 col-md-3 p-md-4 mb-2">
-          <div class="row">
-              <img src="images/salad.png" class="col-12 m-0 mb-2 product_img" alt="tomato salad" />
-          </div>
-          <div class="row">
-            <h2 class="col-12 pt-2">Tomato salad with mozzarella</h2>
-          	<p class="ingredients col-12 mb-2">Tomatoes, mozzarella</p>
-          </div>
-          <div class="row">
-            <select class="col-5 ml-3 custom-select">
-                <option value="italian">Italian dressing</option>
-                <option value="french">French dressing</option>
-            </select>
-            <div class="col-3 text-right align-self-center">
-              <span class="price">5$</span>
-            </div>
-            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
-              <img src="images/cart.png" class="cart" alt="shopping cart" />
-            </div>
-          </div>
-        </div>
-
-        <div id="fieldsalad" class="col-10 col-md-3 p-md-4 mb-2">
-          <div class="row">
-              <img src="images/salad.png" class="col-12 m-0 mb-2 product_img" alt="field salad" />
-          </div>
-          <div class="row">
-            <h2 class="col-12 pt-2">Field salad with egg</h2>
-          	<p class="ingredients col-12 mb-2">Field salad, egg</p>
-          </div>
-          <div class="row">
-            <select class="col-5 ml-3 custom-select">
-                <option value="italian">Italian dressing</option>
-                <option value="french">French dressing</option>
-            </select>
-            <div class="col-3 text-right align-self-center">
-              <span class="price">4$</span>
-            </div>
-            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
-              <img src="images/cart.png" class="cart" alt="shopping cart" />
-            </div>
-          </div>
-        </div>
-
-        <div id="rocket" class="col-10 col-md-3 p-md-4 mb-2">
-          <div class="row">
-              <img src="images/salad.png" class="col-12 m-0 mb-2 product_img" alt="rocket" />
-          </div>
-          <div class="row">
-            <h2 class="col-12 pt-2">Rocket with Parmesan</h2>
-          	<p class="ingredients col-12 mb-2">Rocket, parmesan</p>
-          </div>
-          <div class="row">
-            <select class="col-5 ml-3 custom-select">
-                <option value="italian">Italian dressing</option>
-                <option value="french">French dressing</option>
-            </select>
-            <div class="col-3 text-right align-self-center">
-              <span class="price">5$</span>
-            </div>
-            <div class="col-3 col-md-2 col-ld-3 text-center">
-              <img src="images/cart.png" class="cart" alt="shopping cart" />
-            </div>
-          </div>
-        </div>
+      <div id="content_in_here" class="row justify-content-center">
       </div>
     </div>
 
@@ -163,6 +76,9 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+    <script src="js/tonyspizzafactory.js"></script>
+    <script>
+        http_get_request("https://tonyspizzafactory.herokuapp.com/api/salads", "salad");
+    </script>
 </body>
 </html>

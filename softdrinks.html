@@ -43,83 +43,7 @@
     <!-- Content of the Website -->
     <div id="content">
       <h1 class="text-center">Soft drinks</h1>
-      <div class="row justify-content-center">
-        <div id="coke" class="col-10 col-md-3 p-md-4 mb-2">
-          <div class="row">
-              <img src="images/softdrink.png" class="col-12 m-0 mb-2 product_img" alt="coke" />
-          </div>
-          <div class="row">
-            <h2 class="col-12 pt-2">Coke</h2>
-            <select class="col-5 ml-3 custom-select">
-              <option value="50">50cl</option>
-              <option value="33">33cl</option>
-            </select>
-            <div class="col-3 text-right align-self-center">
-              <span class="price">2$</span>
-            </div>
-            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
-              <img src="images/cart.png" class="cart" alt="shopping cart" />
-            </div>
-          </div>
-        </div>
-
-        <div id="fanta" class="col-10 col-md-3 p-md-4 mb-2">
-          <div class="row">
-              <img src="images/softdrink.png" class="col-12 m-0 mb-2 product_img" alt="fanta" />
-          </div>
-          <div class="row">
-            <h2 class="col-12 pt-2">Fanta</h2>
-            <select class="col-5 ml-3 custom-select">
-              <option value="50">50cl</option>
-              <option value="33">33cl</option>
-            </select>
-            <div class="col-3 text-right align-self-center">
-              <span class="price">2$</span>
-            </div>
-            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
-              <img src="images/cart.png" class="cart" alt="shopping cart" />
-            </div>
-          </div>
-        </div>
-
-        <div id="pepsi" class="col-10 col-md-3 p-md-4 mb-2">
-          <div class="row">
-              <img src="images/softdrink.png" class="col-12 m-0 mb-2 product_img" alt="pepsi" />
-          </div>
-          <div class="row">
-            <h2 class="col-12 pt-2">Pepsi</h2>
-            <select class="col-5 ml-3 custom-select">
-              <option value="50">50cl</option>
-              <option value="33">33cl</option>
-            </select>
-            <div class="col-3 text-right align-self-center">
-              <span class="price">2$</span>
-            </div>
-            <div class="col-3 col-md-2 col-ld-3 text-center">
-              <img src="images/cart.png" class="cart" alt="shopping cart" />
-            </div>
-          </div>
-        </div>
-
-        <div id="redbull" class="col-10 col-md-3 p-md-4 mb-2">
-          <div class="row">
-              <img src="images/softdrink.png" class="col-12 m-0 mb-2 product_img" alt="redbull" />
-          </div>
-          <div class="row">
-            <h2 class="col-12 pt-2">Red bull</h2>
-            <select class="col-5 ml-3 custom-select">
-              <option value="50">50cl</option>
-              <option value="33">33cl</option>
-            </select>
-            <div class="col-3 text-right align-self-center">
-              <span class="price">3$</span>
-            </div>
-            <div class="col-3 col-md-2 col-ld-3 text-center align-self-center">
-              <img src="images/cart.png" class="cart" alt="shopping cart" />
-            </div>
-          </div>
-        </div>
-
+      <div id="content_in_here" class="row justify-content-center">
       </div>
     </div>
 
@@ -150,6 +74,10 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="js/tonyspizzafactory.js"></script>
+    <script>
+        http_get_request("https://tonyspizzafactory.herokuapp.com/api/softdrinks", "softdrinks");
+    </script>
 
 </body>
 </html>

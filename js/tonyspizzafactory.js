@@ -1,26 +1,33 @@
 function http_get_request(link, type) {
     var request = new XMLHttpRequest();
     request.open("GET", link, true);
+    request.product_type = type;
     request.setRequestHeader("Authorization", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MQ.bYceSpllpyYQixgNzDt7dpCkEojdv3NKD-85XLXfdI4");
-    request.setRequestHeader("Content-type", "charset=utf-8");
-    request.onreadystatechange = function () {
-        if(request.readyState === 4){
-            if(request.status === 200) {
-                process(JSON.parse(request.responseText), type);
-            }
-            else {
-                document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + request.status + ")";
-            }
-        }
-    };
-    request.ontimeout = function () {
-        document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + request.status + ")";
-    };
-    request.onerror = function() {
-        document.getElementById("content_in_here").textContent = "Network Error. Couldn't reach the service. (Status " + request.status + ")";
-    };
+    request.onreadystatechange = status;
+    request.ontimeout = timeout;
+    request.onerror = error;
     request.send(null);
 }
+
+function status () {
+    if(this.readyState === 4){
+        if(this.status === 200) {
+            process(JSON.parse(this.responseText), this.product_type);
+        }
+        else {
+            document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + this.status + ")";
+        }
+    }
+}
+
+function timeout () {
+    document.getElementById("content_in_here").textContent = "Timeout. Couldn't reach the service. (Status " + this.status + ")";
+}
+
+function error() {
+    document.getElementById("content_in_here").textContent = "Network Error. Couldn't reach the service. (Status " + this.status + ")";
+}
+
 
 function process(product, type) {
     var parentDiv = document.getElementById("content_in_here");

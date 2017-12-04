@@ -1,41 +1,48 @@
 function form_validation() {
+    if (name_validation() & email_validation() & critic_validation()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function name_validation() {
     var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var critic = document.getElementById("critic");
     var pname = document.getElementById("invalid_name");
-    var pemail = document.getElementById("invalid_email");
-    var pcritic = document.getElementById("invalid_critic");
-    var form_okay = true;
-
-    if (!name_validation(name)) {
-        form_okay = false;
-        input_wrong(pname, name, 'name');
-    }else {
-        input_correct(pname, name);
-    }
-    if (!email_validation(email)) {
-        form_okay = false;
-        input_wrong(pemail, email, 'email');
-    }else {
-        input_correct(pemail, email);
-    }
-    if (critic.value.length < 50) {
-        form_okay = false;
-        input_wrong(pcritic, critic, 'critic');
-    }else {
-        input_correct(pcritic, critic);
-    }
-    return form_okay;
-}
-
-function name_validation(name) {
     var name_pattern = /^[A-Za-zäöüÄÖÜ]+$/;
-    return name_pattern.test(name.value);
+    if (!name_pattern.test(name.value)){
+        input_wrong(pname, name, 'name');
+        return false;
+    }else{
+        input_correct(pname, name);
+        return true;
+    }
 }
 
-function email_validation(email) {
-    var email_pattern = /^[A-Za-z0-9.!#$%&'*+-\/=?^_`{|}~]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z0-9]{2,}$/;
-    return email_pattern.test(email.value);
+function email_validation() {
+    var email = document.getElementById("email");
+    var pemail = document.getElementById("invalid_email");
+    var email_pattern = /^[A-Za-z0-9.!#$%&'*+-\/=?^_`{|}~]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
+    if (!email_pattern.test(email.value)){
+        input_wrong(pemail, email, 'email');
+        return false;
+    }
+    else{
+        input_correct(pemail, email);
+        return true;
+    }
+}
+function critic_validation() {
+    var critic = document.getElementById("critic");
+    var pcritic = document.getElementById("invalid_critic");
+    if (critic.value.length < 50) {
+        input_wrong(pcritic, critic, 'critic');
+        return false;
+    } else{
+        input_correct(pcritic, critic);
+        return true;
+    }
+
 }
 
 function input_wrong(text, input, type) {
@@ -56,6 +63,7 @@ function input_wrong(text, input, type) {
     }
     input.style.border = "3px solid #f00";
 }
+
 
 function input_correct(text, input) {
     input.style.border="1px solid #0275d8";

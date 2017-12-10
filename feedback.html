@@ -45,7 +45,7 @@
       <h1 class="text-center mb-4">Tell us what you think</h1>
 
 
-      <form action="#" method="post" onsubmit="return validation();" class="nop">
+      <form action="#" method="post" onsubmit="return form_validation();" class="nop">
         <div class="row mb-2">
           <div class="col-sm-4 text-md-right">How do you like our pizza?</div>
           <div class="btn-group d-block d-md-inline-flex col-sm-7 nop" data-toggle="buttons">
@@ -128,50 +128,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-
-    <!-- JS-Code -->
-    <script>
-      function validation() {
-          var name = document.getElementById("name");
-          var email = document.getElementById("email");
-          var critic = document.getElementById("critic");
-          var pname = document.getElementById("invalid_name");
-          var pemail = document.getElementById("invalid_email");
-          var pcritic = document.getElementById("invalid_critic");
-          var pattern = /^[A-Za-z0-9.!#$%&'*+-\/=?^_`{|}~]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]{2,})*$/;
-          var form_okay = true;
-
-          if (name.value === "" || name.value.length === 0 || !name.value) {
-              pname.innerHTML = "Type your name!";
-              name.style.border="3px solid #f00";
-              form_okay = false;
-          }else{
-              name.style.border="1px solid #0275d8";
-              pname.innerHTML =  "";
-          }
-          if (email.value === "" || email.value.length === 0 || !email.value) {
-              pemail.innerHTML = "Type your email!";
-              email.style.border="3px solid #f00";
-              form_okay = false;
-          } else if (!pattern.test(email.value)) {
-              pemail.innerHTML = "'" + email.value + "' is not a valid e-mail address.";
-              email.style.border="3px solid #f00";
-              form_okay = false;
-          }else{
-              email.style.border="1px solid #0275d8";
-              pemail.innerHTML = "";
-          }
-          if(critic.value.length < 50){
-              pcritic.innerHTML = "Type your comment into the text area. It should have at least 50 characters to be valid.";
-              critic.style.border="3px solid #f00";
-              form_okay = false;
-          }else{
-              critic.style.border="1px solid #0275d8";
-              pcritic.innerHTML = "";
-          }
-          return form_okay;
-      }
-    </script>
+    <script src="js/tonyspizzafactory_feedback_validation.js"></script>
 </body>
 </html>

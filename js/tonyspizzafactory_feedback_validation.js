@@ -1,21 +1,15 @@
 function form_validation() {
-    if (name_validation() & email_validation() & critic_validation()) {
-        return true;
-    } else {
-        return false;
-    }
+    return (name_validation() & email_validation() & critic_validation()) ? true : false;
 }
 
 function name_validation() {
     var name = document.getElementById("name");
     var pname = document.getElementById("invalid_name");
-    var name_pattern = /^[A-Za-zäöüÄÖÜ]+$/;
+    var name_pattern = /^(?:[A-Za-zäöüÄÖÜ'ñêéèôàâç-]+ )*[A-Za-zäöüÄÖÜ'ñêéèôàâç-]+$/;
     if (!name_pattern.test(name.value)){
         input_wrong(pname, name, 'name');
-        return false;
     }else{
         input_correct(pname, name);
-        return true;
     }
 }
 
@@ -25,11 +19,9 @@ function email_validation() {
     var email_pattern = /^[A-Za-z0-9.!#$%&'*+-\/=?^_`{|}~]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
     if (!email_pattern.test(email.value)){
         input_wrong(pemail, email, 'email');
-        return false;
     }
     else{
         input_correct(pemail, email);
-        return true;
     }
 }
 function critic_validation() {
@@ -37,10 +29,8 @@ function critic_validation() {
     var pcritic = document.getElementById("invalid_critic");
     if (critic.value.length < 50) {
         input_wrong(pcritic, critic, 'critic');
-        return false;
     } else{
         input_correct(pcritic, critic);
-        return true;
     }
 
 }
@@ -48,11 +38,15 @@ function critic_validation() {
 function input_wrong(text, input, type) {
     switch(type) {
         case 'name':
-            text.innerHTML = "Type your " + type;
+            if(input.value === ''){
+                text.innerHTML = "Type your name";
+            }else {
+                text.innerHTML = "'" + input.value + "' is not a valid name. Only letters and apostrophes are allowed.";
+            }
             break;
         case 'email':
             if(input.value === ''){
-                text.innerHTML = "Type your " + type;
+                text.innerHTML = "Type your email";
             }else {
                 text.innerHTML = "'" + input.value + "' is not a valid e-mail address.";
             }
@@ -62,10 +56,12 @@ function input_wrong(text, input, type) {
             break;
     }
     input.style.border = "3px solid #f00";
+    return false;
 }
 
 
 function input_correct(text, input) {
     input.style.border="1px solid #0275d8";
     text.innerHTML =  "";
+    return true;
 }

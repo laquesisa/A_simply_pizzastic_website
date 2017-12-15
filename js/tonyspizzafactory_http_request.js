@@ -40,7 +40,7 @@ function process(product, type) {
 
 function show_product(product, type){
     var product_Div = document.createElement("div");
-    product_Div.id = product;
+    product_Div.setAttribute("id", product.name.toLowerCase().replace(/ /g,''));
     product_Div.classList.add("col-10", "col-md-3", "p-md-4", "mb-2", "nop");
 
     product_Div.appendChild(add_image(product));
@@ -84,11 +84,12 @@ function add_description(product, type) {
     var cartImg = document.createElement("img");
     cartImg.setAttribute("src", "images/cart.png");
     cartImg.setAttribute("alt", "shopping cart");
+    cartImg.setAttribute("onclick", "order('" + product.name + "', '" + type + "');")
     cartImg.classList.add("cart");
     cartDiv.appendChild(cartImg);
     info.appendChild(cartDiv);
 
-    if(type === "salad" || type === "softdrinks"){
+    if(type === "salad" || type === "softdrink"){
         var selectEle = document.createElement("select");
         selectEle.classList.add("col-5", "ml-3", "custom-select");
         var first = document.createElement("option");
@@ -104,7 +105,7 @@ function add_description(product, type) {
                 selectEle.appendChild(second);
                 break;
 
-            case "softdrinks":
+            case "softdrink":
                 first.value = "50";
                 second.value = "33";
                 first.textContent = "50cl";
@@ -131,4 +132,52 @@ function add_description(product, type) {
     }
 
     return info;
+}
+
+
+function order(name, type) {
+    var data = {
+        "name": name,
+        "type": type
+    };
+    if(type == "salad" || type == "softdrink"){
+        var prod_select = document.getElementById(name.toLowerCase().replace(/ /g,'')).getElementsByTagName("select")[0];
+        var selection = prod_select.options[prod_select.selectedIndex].value;
+        switch(type){
+            case "salad":
+                data.dressing = selection;
+                break;
+            case "softdrink":
+                data.cl = selection;
+                break;
+        }
+    }
+    //console.log(data);
+    var url ="https://tonyspizzafactory.herokuapp.com/api/orders";
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.setRequestHeader("Authorization", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MQ.bYceSpllpyYQixgNzDt7dpCkEojdv3NKD-85XLXfdI4");
+    xhr.send(JSON.stringify(data));
+    xhr.onreadystatechange = status_order;
+    xhr.onerror = error_order;
+    xhr.ontimeout = timeout_order;
+}
+
+function status_order() {
+    if(this.readyState == 4){
+        if(this.status <= 201){
+            var order = JSON.parse(this.responseText);
+            //console.log(order);
+            document.getElementById("content_in_here").innerHTML = "<div class='alert alert-success'>Your order was a success. You've ordered a " + order.type + ": "+ order.name + ".</div>";
+        }
+    }
+}
+
+function error_order() {
+    document.getElementById("content_in_here").innerHTML = "<div class='alert alert-danger'>Timeout. Couldn't reach the service. (Status " + this.status + ")</div>";
+}
+
+function timeout_order(){
+    document.getElementById("content_in_here").innerHTML = "<div class='alert alert-danger'>Network Error. Couldn't reach the service. (Status " + this.status + ")</div>";
 }

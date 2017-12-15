@@ -45,6 +45,7 @@ p.ingredients{
 .cart{
   height: 2.5em;
   width: 2.5em;
+  cursor: pointer;
 }
 
 /* The first Button should be as big as the others, not bigger */

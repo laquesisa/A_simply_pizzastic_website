@@ -1,5 +1,8 @@
 ## This website is for a school project at the FFHS.
 
+### ----------- 15.12.2017 Version 1.0.5 ------------
+The order of pizza, salad and softdrinks is now possible.
+
 ### ----------- 01.12.2017 Version 1.0.4 ------------
 Information about pizzas, salads and softdrinks are fetched by an asynchron
 HTTP-GET-Request to the Api: https://tonyspizzafactory.herokuapp.com/api
